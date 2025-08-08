@@ -21,8 +21,8 @@ else:
     else:
         # Step 3: ATS June 2025 Eligibility
         st.header("Step 3: ATS June 2025 Eligibility")
-        country = st.selectbox("Select the candidate's country:", ["China", "Mauritius", "Maldives", "Other"])
-        if country in ["China", "Mauritius", "Maldives"]:
+        country = st.selectbox("Select the candidate's country:", ["China", "Cuba", "Iran", "Mauritius", "Maldives", "Other"])
+        if country in ["China", "Cuba", "Iran", "Mauritius", "Maldives"]:
             st.warning("ATS June 2025 service is not available for this country.")
             st.info("Access the script via RM Assessor. [Pending confirmation from Ellie]")
         else:
