@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Subject Access Request Decision Tree", layout="wide")
 
 st.title("🎓 Subject Access Request Decision Tree")
-st.markdown("Use this interactive tool to determine how to handle candidate requests based on the process flow.")
+st.markdown("Use this interactive tool to determine how to handle SARs based on the process flow.")
 
 # Step 1: Ministry Case Check
 st.header("Step 1: Ministry Case Check")
