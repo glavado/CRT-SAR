@@ -1,9 +1,9 @@
 
 import streamlit as st
 
-st.set_page_config(page_title="Candidate Request Decision Tree", layout="wide")
+st.set_page_config(page_title="Subject Access Request Decision Tree", layout="wide")
 
-st.title("🎓 Candidate Request Decision Tree")
+st.title("🎓 Subject Access Request Decision Tree")
 st.markdown("Use this interactive tool to determine how to handle candidate requests based on the process flow.")
 
 # Step 1: Ministry Case Check
