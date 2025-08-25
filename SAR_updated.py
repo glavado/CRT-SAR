@@ -17,7 +17,7 @@ if ministry_case == "Yes":
     st.info("Refer to the card ‘Ministry SARs’.")
 
 # CMR and Item-Level Mark Requests
-st.header("Step 2: CMR and Item-Level Mark Requests")
+st.header("CMR and Item-Level Mark Requests")
 cmr_request = st.radio("Is this a CMR request from J24 onward?", ["Yes", "No"])
 item_level_request = st.radio("Is this an item-level mark request from J25 onward?", ["Yes", "No"])
 
@@ -29,7 +29,7 @@ elif item_level_request == "Yes":
     st.success("Use Macro: 'Response: J25 onward - item level marks request'")
 
 # ATS Service Eligibility
-st.header("Step 3: ATS June 2025 Eligibility")
+st.header("ATS June 2025 Eligibility")
 country = st.selectbox("Select the candidate's country:", ["China", "Cuba", "Iran", "Mauritius", "Maldives", "Other"])
 bc_private_candidate = st.radio("Is this a British Council private candidate?", ["Yes", "No"])
 
@@ -41,7 +41,7 @@ else:
     st.success("ATS June 2025 service is available.")
 
 # COS Requests
-st.header("Step 4: Copy of Script (COS) Requests")
+st.header("Copy of Script (COS) Requests")
 cos_type = st.selectbox("Type of COS request:", ["COS only", "COS + annotations"])
 
 if cos_type == "COS only":
@@ -50,13 +50,13 @@ elif cos_type == "COS + annotations":
     st.success("Use Macro: 'Script request for annotations under SAR' and provide via RM Assessor")
 
 # MCQ Requests
-st.header("Step 5: MCQ Requests")
+st.header("MCQ Requests")
 mcq_request = st.radio("Is this a request for MCQ (Multiple Choice Question Paper)?", ["Yes", "No"])
 if mcq_request == "Yes":
     st.success("Send to ADA: CIAssessmentDataAndAnalytics@cambridge.org. Use Macro: 'Subject Access Request: Template to raise to ASQ'")
 
 # Historic Requests
-st.header("Step 6: Historic Requests")
+st.header("Historic Requests")
 historic_type = st.selectbox("Select the type of historic request:", [
     "PK learner component marks (Nov21–Mar24)",
     "Copy of script (≤11 months old)",
