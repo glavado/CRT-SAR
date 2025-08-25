@@ -76,7 +76,7 @@ with st.expander("Historic Requests"):
         "MCQ request (not in ATS)"
     ])
     
-    if historic_type == "PK learner CMR (Nov21–Mar24)":
+    if historic_type == "PK CMR (Nov21–Mar24)":
         st.info("Refer to the recording and process document.")
     elif historic_type == "Copy of script (≤11 months old)":
         st.success("CRT can access via RM Assessor.")
