@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Subject Access Request (SAR) Process Guide")
+st.title("SAR Process Guide")
 
 # Initial Checks
 st.header("Initial Checks")
@@ -16,7 +16,7 @@ ministry_case = st.radio("Is this a Ministry country?", ["Yes", "No"])
 if ministry_case == "Yes":
     st.info("Refer to the card ‘Ministry SARs’.")
 
-# Refer to School (J24+ CMR and J25 Item-Level)
+# Refer to School (J24+ CMR & J25 Item-Level)
 st.header("Refer to School (J24+ CMR and J25 Item-Level)")
 
 cmr_request = st.radio("Is this a CMR request from J24 onward?", ["Yes", "No"])
@@ -29,11 +29,11 @@ elif cmr_request == "Yes":
 elif item_level_request == "Yes":
     st.success("Use Macro: 'Response: J25 onward - item level marks request'")
 
-# J25 - Access to Scripts / Copy of Script requests
-st.header("J25 - Access to Scripts / Copy of Script requests")
+# J25 - Access to Scripts / Copy of Script
+st.header("J25 - Access to Scripts / Copy of Script")
 
 # ATS Service Eligibility
-st.markdown("# ATS June 2025 Eligibility")
+st.markdown("### ATS June 2025 Eligibility")
 country = st.selectbox("Select the candidate's country:", ["China", "Cuba", "Iran", "Mauritius", "Maldives", "Other"])
 bc_private_candidate = st.radio("Is this a British Council private candidate?", ["Yes", "No"])
 
@@ -45,7 +45,7 @@ else:
     st.success("ATS June 2025 service is available.")
 
 # COS Requests
-st.header("Copy of Script (COS) Requests")
+st.markdown("### Copy of Script (COS) Requests")
 cos_type = st.selectbox("Type of COS request:", ["COS only", "COS + annotations"])
 
 if cos_type == "COS only":
@@ -54,8 +54,8 @@ elif cos_type == "COS + annotations":
     st.success("Use Macro: 'Script request for annotations under SAR' and provide via RM Assessor")
 
 # MCQ Requests
-st.header("MCQ Requests")
-mcq_request = st.radio("Is this a request for MCQ (Multiple Choice Question Paper)?", ["Yes", "No"])
+st.markdown("### "MCQ Requests")
+mcq_request = st.radio("Is this a request for MCQ item-level marks?", ["Yes", "No"])
 if mcq_request == "Yes":
     st.success("Send to ADA: CIAssessmentDataAndAnalytics@cambridge.org. Use Macro: 'Subject Access Request: Template to raise to ASQ'")
 
