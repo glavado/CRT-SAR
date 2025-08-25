@@ -4,6 +4,7 @@ st.title("SAR Process Guide")
 
 # Initial Checks
 st.header("Initial Checks")
+with st.expander("Initial Checks"):
 previous_request = st.radio("Has this candidate contacted us before?", ["", "Yes", "No"])
 if previous_request == "Yes":
     st.info("Use Macro: 'Multiple requests from the same person'")
@@ -18,6 +19,7 @@ if ministry_case == "Yes":
 
 # Refer to School (J24+ CMR & J25 Item-Level)
 st.header("Refer to School (J24+ CMR & J25 Item-Level)")
+with st.expander("Refer to School (J24+ CMR & J25 Item-Level)"):
 
 cmr_request = st.radio("Is this a CMR request from J24 onward?", ["", "Yes", "No"])
 item_level_request = st.radio("Is this an item-level mark request from J25 onward?", ["", "Yes", "No"])
@@ -62,6 +64,7 @@ with st.expander("J25 - Access to Scripts / Copy of Script"):
 
 # Historic Requests
 st.header("Historic Requests")
+with st.expander("Historic Requests"):
 historic_type = st.selectbox("Select the type of historic request:", ["Select",
     "PK CMR (Nov21–Mar24)",
     "Copy of script (≤11 months old)",
