@@ -17,7 +17,7 @@ if ministry_case == "Yes":
     st.info("Refer to the card ‘Ministry SARs’.")
 
 # Refer to School (J24+ CMR & J25 Item-Level)
-st.header("Refer to School (J24+ CMR and J25 Item-Level)")
+st.header("Refer to School (J24+ CMR & J25 Item-Level)")
 
 cmr_request = st.radio("Is this a CMR request from J24 onward?", ["Yes", "No"])
 item_level_request = st.radio("Is this an item-level mark request from J25 onward?", ["Yes", "No"])
