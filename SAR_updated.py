@@ -33,7 +33,7 @@ elif item_level_request == "Yes":
 st.header("June 2025 - Access to Scripts / Copy of Script requests")
 
 # ATS Service Eligibility
-st.markdown("##"ATS June 2025 Eligibility")
+st.markdown("## ATS June 2025 Eligibility")
 country = st.selectbox("Select the candidate's country:", ["China", "Cuba", "Iran", "Mauritius", "Maldives", "Other"])
 bc_private_candidate = st.radio("Is this a British Council private candidate?", ["Yes", "No"])
 
