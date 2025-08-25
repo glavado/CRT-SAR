@@ -4,18 +4,18 @@ st.title("SAR Process Guide")
 
 # Initial Checks
 with st.expander("Initial Checks"):
-st.header("Initial Checks")
-previous_request = st.radio("Has this candidate contacted us before?", ["Yes", "No"])
-if previous_request == "Yes":
-    st.info("Use Macro: 'Multiple requests from the same person'")
+    st.header("Initial Checks")
+    previous_request = st.radio("Has this candidate contacted us before?", ["Yes", "No"])
+    if previous_request == "Yes":
+        st.info("Use Macro: 'Multiple requests from the same person'")
 
-id_received = st.radio("Has the candidate provided ID?", ["Yes", "No"])
-if id_received == "No":
-    st.warning("Use Macro: 'Provide ID'")
+    id_received = st.radio("Has the candidate provided ID?", ["Yes", "No"])
+    if id_received == "No":
+        st.warning("Use Macro: 'Provide ID'")
 
-ministry_case = st.radio("Is this a Ministry country?", ["Yes", "No"])
-if ministry_case == "Yes":
-    st.info("Refer to the card ‘Ministry SARs’.")
+    ministry_case = st.radio("Is this a Ministry country?", ["Yes", "No"])
+    if ministry_case == "Yes":
+        st.info("Refer to the card ‘Ministry SARs’.")
 
 # Refer to School (J24+ CMR & J25 Item-Level)
 st.header("Refer to School (J24+ CMR & J25 Item-Level)")
