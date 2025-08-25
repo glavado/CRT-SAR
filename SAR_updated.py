@@ -12,8 +12,6 @@ id_received = st.radio("Has the candidate provided ID?", ["Yes", "No"])
 if id_received == "No":
     st.warning("Use Macro: 'Provide ID'")
 
-# Ministry Country Check
-st.header("Step 1: Ministry Case Check")
 ministry_case = st.radio("Is this a Ministry country?", ["Yes", "No"])
 if ministry_case == "Yes":
     st.info("Refer to the card ‘Ministry SARs’.")
