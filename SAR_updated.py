@@ -35,7 +35,7 @@ st.header("J25 - Access to Scripts / Copy of Script")
 # ATS Service Eligibility
 st.markdown("### ATS June 2025 Eligibility")
 country = st.selectbox("Select the candidate's country:", ["China", "Cuba", "Iran", "Mauritius", "Maldives", "Other"])
-bc_private_candidate = st.radio("Is this a British Council private candidate?", ["Yes", "No"])
+bc_private_candidate = st.radio("Is this a British Council PK private candidate?", ["Yes", "No"])
 
 if country in ["China", "Cuba", "Iran", "Mauritius", "Maldives"]:
     st.warning("ATS June 2025 service is not available for this country.")
@@ -46,18 +46,18 @@ else:
 
 # COS Requests
 st.markdown("### Copy of Script (COS) Requests")
-cos_type = st.selectbox("Type of COS request:", ["COS only", "COS + annotations"])
+cos_type = st.selectbox("Type of COS request:", ["COS only", "COS + annotations for J25"])
 
 if cos_type == "COS only":
     st.success("Use Macro: 'Request for copy of script under SAR'")
-elif cos_type == "COS + annotations":
-    st.success("Use Macro: 'Script request for annotations under SAR' and provide via RM Assessor")
+elif cos_type == "COS + annotations for J25":
+    st.success("Add to ‘COS for J25’ list while we wait for instructions")
 
 # MCQ Requests
 st.markdown("### MCQ Requests")
 mcq_request = st.radio("Is this a request for MCQ item-level marks?", ["Yes", "No"])
 if mcq_request == "Yes":
-    st.success("Send to ADA: CIAssessmentDataAndAnalytics@cambridge.org. Use Macro: 'Subject Access Request: Template to raise to ASQ'")
+    st.success("MCQ item-level marks are not available in ATS. Send to ADA: CIAssessmentDataAndAnalytics@cambridge.org. Use Macro: 'Subject Access Request: Template to raise to ASQ'")
 
 # Historic Requests
 st.header("Historic Requests")
