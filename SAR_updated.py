@@ -16,8 +16,8 @@ ministry_case = st.radio("Is this a Ministry country?", ["Yes", "No"])
 if ministry_case == "Yes":
     st.info("Refer to the card ‘Ministry SARs’.")
 
-# Refer to School (J24+ CMR and J25 Item-Level marks)
-st.header("Refer to School (J24+ CMR and J25 Item-Level marks)")
+# Refer to School (J24+ CMR and J25 Item-Level)
+st.header("Refer to School (J24+ CMR and J25 Item-Level)")
 
 cmr_request = st.radio("Is this a CMR request from J24 onward?", ["Yes", "No"])
 item_level_request = st.radio("Is this an item-level mark request from J25 onward?", ["Yes", "No"])
@@ -29,8 +29,11 @@ elif cmr_request == "Yes":
 elif item_level_request == "Yes":
     st.success("Use Macro: 'Response: J25 onward - item level marks request'")
 
+# June 2025 - Access to Scripts / Copy of Script requests
+st.header("June 2025 - Access to Scripts / Copy of Script requests")
+
 # ATS Service Eligibility
-st.header("ATS June 2025 Eligibility")
+st.markdown("##"ATS June 2025 Eligibility")
 country = st.selectbox("Select the candidate's country:", ["China", "Cuba", "Iran", "Mauritius", "Maldives", "Other"])
 bc_private_candidate = st.radio("Is this a British Council private candidate?", ["Yes", "No"])
 
