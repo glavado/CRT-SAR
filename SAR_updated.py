@@ -30,8 +30,8 @@ elif item_level_request == "Yes":
     st.success("Use Macro: 'Response: J25 onward - item level marks request'")
 
 # J25 - Access to Scripts / Copy of Script
+st.header("J25 - Access to Scripts / Copy of Script")
 with st.expander("J25 - Access to Scripts / Copy of Script"):
-    st.header("J25 - Access to Scripts / Copy of Script")
 
     # ATS Service Eligibility
     st.markdown("### ATS June 2025 Eligibility")
