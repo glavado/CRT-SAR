@@ -29,11 +29,11 @@ elif cmr_request == "Yes":
 elif item_level_request == "Yes":
     st.success("Use Macro: 'Response: J25 onward - item level marks request'")
 
-# June 2025 - Access to Scripts / Copy of Script requests
-st.header("June 2025 - Access to Scripts / Copy of Script requests")
+# J25 - Access to Scripts / Copy of Script requests
+st.header("J25 - Access to Scripts / Copy of Script requests")
 
 # ATS Service Eligibility
-st.markdown("## ATS June 2025 Eligibility")
+st.markdown("# ATS June 2025 Eligibility")
 country = st.selectbox("Select the candidate's country:", ["China", "Cuba", "Iran", "Mauritius", "Maldives", "Other"])
 bc_private_candidate = st.radio("Is this a British Council private candidate?", ["Yes", "No"])
 
