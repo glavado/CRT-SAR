@@ -42,12 +42,12 @@ if country in ["China", "Cuba", "Iran", "Mauritius", "Maldives"]:
     st.warning("ATS June 2025 service is not available for this country.")
 elif bc_private_candidate == "Yes":
     st.warning("Use Macro: 'Response: Unable to access ATS as a PK private candidate'")
-else:
+elif country != "" and bc_private_candidate != "":
     st.success("ATS June 2025 service is available.")
 
 # COS Requests
 st.markdown("### Copy of Script (COS) Requests")
-cos_type = st.selectbox("Type of COS request:", ["", "COS only", "COS + annotations for J25"])
+cos_type = st.selectbox("Type of COS request:", ["Select", "COS only", "COS + annotations for J25"])
 
 if cos_type == "COS only":
     st.success("Use Macro: 'Request for copy of script under SAR'")
@@ -63,7 +63,7 @@ if mcq_request == "Yes":
 # Historic Requests
 st.header("Historic Requests")
 historic_type = st.selectbox("Select the type of historic request:", ["",
-    "PK learner CMR (Nov21–Mar24)",
+    "PK CMR (Nov21–Mar24)",
     "Copy of script (≤11 months old)",
     "Copy of script (11–18 months old)",
     "Copy of script (>18 months old)",
@@ -81,5 +81,5 @@ elif historic_type == "Copy of script (11–18 months old)":
     st.warning("Contact Leah Dark to confirm if we still hold the script or if Archives do.")
 elif historic_type == "Copy of script (>18 months old)":
     st.error("We do not hold the script. It has been destroyed.")
-else:
+elif historic_type != "":
     st.success("Send to ADA: CIAssessmentDataAndAnalytics@cambridge.org. Use Macro: 'Subject Access Request - Template to raise requests (ADA)'")
