@@ -54,7 +54,7 @@ elif cos_type == "COS + annotations":
     st.success("Use Macro: 'Script request for annotations under SAR' and provide via RM Assessor")
 
 # MCQ Requests
-st.markdown("### "MCQ Requests")
+st.markdown("### MCQ Requests")
 mcq_request = st.radio("Is this a request for MCQ item-level marks?", ["Yes", "No"])
 if mcq_request == "Yes":
     st.success("Send to ADA: CIAssessmentDataAndAnalytics@cambridge.org. Use Macro: 'Subject Access Request: Template to raise to ASQ'")
