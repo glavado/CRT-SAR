@@ -5,23 +5,23 @@ st.title("SAR Process Guide")
 # Initial Checks
 with st.expander("Initial Checks"):
     st.header("Initial Checks")
-    previous_request = st.radio("Has this candidate contacted us before?", ["Select an option", "Yes", "No"])
+    previous_request = st.radio("Has this candidate contacted us before?", ["", "Yes", "No"])
     if previous_request == "Yes":
         st.info("Use Macro: 'Multiple requests from the same person'")
 
-    id_received = st.radio("Has the candidate provided ID?", ["Select an option", "Yes", "No"])
+    id_received = st.radio("Has the candidate provided ID?", ["", "Yes", "No"])
     if id_received == "No":
         st.warning("Use Macro: 'Provide ID'")
 
-    ministry_case = st.radio("Is this a Ministry country?", ["Select an option", "Yes", "No"])
+    ministry_case = st.radio("Is this a Ministry country?", ["", "Yes", "No"])
     if ministry_case == "Yes":
         st.info("Refer to the card ‘Ministry SARs’.")
 
 # Refer to School (J24+ CMR & J25 Item-Level)
 st.header("Refer to School (J24+ CMR & J25 Item-Level)")
 
-cmr_request = st.radio("Is this a CMR request from J24 onward?", ["Select an option", "Yes", "No"])
-item_level_request = st.radio("Is this an item-level mark request from J25 onward?", ["Select an option", "Yes", "No"])
+cmr_request = st.radio("Is this a CMR request from J24 onward?", ["", "Yes", "No"])
+item_level_request = st.radio("Is this an item-level mark request from J25 onward?", ["", "Yes", "No"])
 
 if cmr_request == "Yes" and item_level_request == "Yes":
     st.success("Use Macro: 'Response: J25 onward - CMR and Item level marks request'")
@@ -36,7 +36,7 @@ st.header("J25 - Access to Scripts / Copy of Script")
 # ATS Service Eligibility
 st.markdown("### ATS June 2025 Eligibility")
 country = st.selectbox("Select the candidate's country:", ["Select a country", "China", "Cuba", "Iran", "Mauritius", "Maldives", "Other"])
-bc_private_candidate = st.radio("Is this a British Council PK private candidate?", ["Select an option", "Yes", "No"])
+bc_private_candidate = st.radio("Is this a British Council PK private candidate?", ["", "Yes", "No"])
 
 if country in ["China", "Cuba", "Iran", "Mauritius", "Maldives"]:
     st.warning("ATS June 2025 service is not available for this country.")
@@ -47,7 +47,7 @@ else:
 
 # COS Requests
 st.markdown("### Copy of Script (COS) Requests")
-cos_type = st.selectbox("Type of COS request:", ["Select an option", "COS only", "COS + annotations for J25"])
+cos_type = st.selectbox("Type of COS request:", ["", "COS only", "COS + annotations for J25"])
 
 if cos_type == "COS only":
     st.success("Use Macro: 'Request for copy of script under SAR'")
@@ -56,13 +56,13 @@ elif cos_type == "COS + annotations for J25":
 
 # MCQ Requests
 st.markdown("### MCQ Requests")
-mcq_request = st.radio("Is this a request for MCQ item-level marks?", ["Select an option", "Yes", "No"])
+mcq_request = st.radio("Is this a request for MCQ item-level marks?", ["", "Yes", "No"])
 if mcq_request == "Yes":
     st.success("MCQ item-level marks are not available in ATS. Send to ADA: CIAssessmentDataAndAnalytics@cambridge.org. Use Macro: 'Subject Access Request: Template to raise to ASQ'")
 
 # Historic Requests
 st.header("Historic Requests")
-historic_type = st.selectbox("Select the type of historic request:", [
+historic_type = st.selectbox("Select the type of historic request:", ["",
     "PK learner CMR (Nov21–Mar24)",
     "Copy of script (≤11 months old)",
     "Copy of script (11–18 months old)",
