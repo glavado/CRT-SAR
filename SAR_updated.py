@@ -84,5 +84,6 @@ with st.expander("Historic Requests"):
         st.warning("Contact Leah Dark to confirm if we still hold the script or if Archives do.")
     elif historic_type == "Copy of script (>18 months old)":
         st.error("We do not hold the script. It has been destroyed.")
-    elif historic_type != "":
+    elif historic_type == "Select":
+    else   
         st.success("Send to ADA: CIAssessmentDataAndAnalytics@cambridge.org. Use Macro: 'Subject Access Request - Template to raise requests (ADA)'")
