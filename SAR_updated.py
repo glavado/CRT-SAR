@@ -3,6 +3,7 @@ import streamlit as st
 st.title("SAR Process Guide")
 
 # Initial Checks
+with st.expander("Initial Checks"):
 st.header("Initial Checks")
 previous_request = st.radio("Has this candidate contacted us before?", ["Yes", "No"])
 if previous_request == "Yes":
