@@ -16,8 +16,11 @@ ministry_case = st.radio("Is this a Ministry country?", ["Yes", "No"])
 if ministry_case == "Yes":
     st.info("Refer to the card ‘Ministry SARs’.")
 
+# Refer to School
+st.header("Refer to School")
+
 # CMR and Item-Level Mark Requests
-st.header("CMR and Item-Level Mark Requests")
+st.header("CMR J24+ and Item-Level Mark J25 Requests")
 cmr_request = st.radio("Is this a CMR request from J24 onward?", ["Yes", "No"])
 item_level_request = st.radio("Is this an item-level mark request from J25 onward?", ["Yes", "No"])
 
@@ -58,17 +61,17 @@ if mcq_request == "Yes":
 # Historic Requests
 st.header("Historic Requests")
 historic_type = st.selectbox("Select the type of historic request:", [
-    "PK learner component marks (Nov21–Mar24)",
+    "PK learner CMR (Nov21–Mar24)",
     "Copy of script (≤11 months old)",
     "Copy of script (11–18 months old)",
     "Copy of script (>18 months old)",
-    "Other country component marks (pre-J24)",
-    "PK component marks (pre-N21)",
+    "Other country CMR (pre-J24)",
+    "PK CMR (pre-N21)",
     "Item level marks (any series)",
     "MCQ request (not in ATS)"
 ])
 
-if historic_type == "PK learner component marks (Nov21–Mar24)":
+if historic_type == "PK learner CMR (Nov21–Mar24)":
     st.info("Refer to the recording and process document.")
 elif historic_type == "Copy of script (≤11 months old)":
     st.success("CRT can access via RM Assessor.")
