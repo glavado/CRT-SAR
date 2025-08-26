@@ -7,15 +7,21 @@ st.header("Initial Checks")
 with st.expander("Initial Checks"):
     previous_request = st.radio("Has this candidate contacted us before?", ["", "Yes", "No"])
     if previous_request == "Yes":
-        st.info("Use Macro: 'Multiple requests from the same person'")
+        st.warning("Use Macro: 'Multiple requests from the same person'")
+    if previous_request == "No":
+        st.info("Proceed with request.") 
 
     id_received = st.radio("Has the candidate provided appropriate ID?", ["", "Yes", "No"])
     if id_received == "No":
-        st.warning("Use Macro: 'Provide ID'")
+        st.error("Use Macro: 'Provide ID'")
+    if id_received == "Yes":
+        st.info("Proceed with request.") 
 
     ministry_case = st.radio("Is this a Ministry country?", ["", "Yes", "No"])
     if ministry_case == "Yes":
         st.info("Refer to the card ‘Ministry SARs’.")
+    if ministry_case == "No":
+        st.info("Proceed with request.") 
 
 # Refer to School (J24+ CMR & J25 Item-Level)
 st.header("Refer to School (J24+ CMR & J25 Item-Level)")
