@@ -19,7 +19,7 @@ with st.expander("Initial Checks"):
 
     ministry_case = st.radio("Is this a Ministry country?", ["Yes", "No"])
     if ministry_case == "Yes":
-        st.info("Refer to the card ‘Ministry SARs’.")
+        st.warning("Refer to the card ‘Ministry SARs’.")
     if ministry_case == "No":
         st.info("Proceed with request.") 
 
