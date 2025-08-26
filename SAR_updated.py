@@ -9,7 +9,7 @@ with st.expander("Initial Checks"):
     if previous_request == "Yes":
         st.info("Use Macro: 'Multiple requests from the same person'")
 
-    id_received = st.radio("Has the candidate provided ID?", ["", "Yes", "No"])
+    id_received = st.radio("Has the candidate provided appropriate ID?", ["", "Yes", "No"])
     if id_received == "No":
         st.warning("Use Macro: 'Provide ID'")
 
