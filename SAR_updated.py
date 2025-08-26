@@ -33,9 +33,9 @@ with st.expander("Refer to School (J24+ CMR & J25 Item-Level)"):
     if cmr_request == "Yes" and item_level_request == "Yes":
         st.success("Use Macro: 'Response: J25 onward - CMR and Item level marks request'")
     elif cmr_request == "Yes":
-        st.success("Use Macro: 'Response: J24 onwards - CMR request'")
+        st.success("Component marks info has been released to all schools. Use Macro: 'Response: J24 onwards - CMR request'")
     elif item_level_request == "Yes":
-        st.success("Use Macro: 'Response: J25 onward - item level marks request'")
+        st.success("ATS service includes item-level marks. Use Macro: 'Response: J25 onward - item level marks request' (for ATS eligible.")
 
 # J25 - Access to Scripts / Copy of Script
 st.header("J25 - Access to Scripts / Copy of Script")
@@ -49,7 +49,7 @@ with st.expander("J25 - Access to Scripts / Copy of Script"):
     if country in ["China", "Cuba", "Iran", "Mauritius", "Maldives"]:
         st.warning("ATS June 2025 service is not available for this country.")
     elif bc_private_candidate == "Yes":
-        st.warning("Use Macro: 'Response: Unable to access ATS as a PK private candidate'")
+        st.error("ATS not available. For ATS-related concern, use Macro: 'Response: Unable to access ATS as a PK private candidate'")
     elif country != "" and bc_private_candidate != "":
         st.success("ATS June 2025 service is available.")
 
