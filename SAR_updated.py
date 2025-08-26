@@ -35,7 +35,7 @@ with st.expander("Refer to School (J24+ CMR & J25 Item-Level)"):
     elif cmr_request == "Yes":
         st.success("Component marks info has been released to all schools. Use Macro: 'Response: J24 onwards - CMR request'")
     elif item_level_request == "Yes":
-        st.success("ATS service includes item-level marks. Use Macro: 'Response: J25 onward - item level marks request' (for ATS eligible.")
+        st.success("ATS service includes item-level marks. Use Macro: 'Response: J25 onward - item level marks request' (except for non-ATS eligible.)")
 
 # J25 - Access to Scripts / Copy of Script
 st.header("J25 - Access to Scripts / Copy of Script")
