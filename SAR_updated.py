@@ -58,7 +58,7 @@ with st.expander("J25 - Access to Scripts / Copy of Script"):
 
     # MCQ Requests
     st.markdown("### MCQ Requests")
-    mcq_request = st.radio("Is this a request for MCQ item-level marks?", ["", "Yes", "No"])
+    mcq_request = st.radio("Is this a request for MCQ item-level marks?", ["Yes", "No"])
     if mcq_request == "Yes":
         st.success("MCQ item-level marks are not available in ATS. Send to ADA: CIAssessmentDataAndAnalytics@cambridge.org. Use Macro: 'Subject Access Request: Template to raise to ASQ'")
 
