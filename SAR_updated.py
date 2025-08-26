@@ -86,7 +86,7 @@ with st.expander("Historic Requests"):
         st.error("We do not hold the script. It has been destroyed.")
     elif historic_type in [
         "Other country/Non-PK CMR (pre-J24)", 
-        "PK component marks (pre-N21)",
+        "PK CMR (pre-N21)",
         "Item level marks (any series)",
         "MCQ request (not in ATS)"
     ]: 
