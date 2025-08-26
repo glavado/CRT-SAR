@@ -5,19 +5,19 @@ st.title("SAR Process Guide")
 # Initial Checks
 st.header("Initial Checks")
 with st.expander("Initial Checks"):
-    previous_request = st.radio("Has this candidate contacted us before?", ["", "Yes", "No"])
+    previous_request = st.radio("Has this candidate contacted us before?", ["Yes", "No"])
     if previous_request == "Yes":
         st.warning("Use Macro: 'Multiple requests from the same person'")
     if previous_request == "No":
         st.info("Proceed with request.") 
 
-    id_received = st.radio("Has the candidate provided appropriate ID?", ["", "Yes", "No"])
+    id_received = st.radio("Has the candidate provided appropriate ID?", ["Yes", "No"])
     if id_received == "No":
         st.error("Use Macro: 'Provide ID'")
     if id_received == "Yes":
         st.info("Proceed with request.") 
 
-    ministry_case = st.radio("Is this a Ministry country?", ["", "Yes", "No"])
+    ministry_case = st.radio("Is this a Ministry country?", ["Yes", "No"])
     if ministry_case == "Yes":
         st.info("Refer to the card ‘Ministry SARs’.")
     if ministry_case == "No":
