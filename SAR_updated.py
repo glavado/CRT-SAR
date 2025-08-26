@@ -67,11 +67,11 @@ st.header("Historic Requests")
 with st.expander("Historic Requests"):
     historic_type = st.selectbox("Select the type of historic request:", ["Select",
         "PK CMR (Nov21–Mar24)",
+        "PK CMR (pre-N21)",
+        "Other country/Non-PK CMR (pre-J24)",                                                                 
         "Copy of script (≤11 months old)",
         "Copy of script (11–18 months old)",
         "Copy of script (>18 months old)",
-        "Other country CMR (pre-J24)",
-        "PK CMR (pre-N21)",
         "Item level marks (any series)",
         "MCQ request (not in ATS)"
     ])
@@ -85,7 +85,7 @@ with st.expander("Historic Requests"):
     elif historic_type == "Copy of script (>18 months old)":
         st.error("We do not hold the script. It has been destroyed.")
     elif historic_type in [
-        "Other country component marks (pre-J24)",
+        "Other country/Non-PK CMR (pre-J24)", 
         "PK component marks (pre-N21)",
         "Item level marks (any series)",
         "MCQ request (not in ATS)"
